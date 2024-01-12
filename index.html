@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h3>Calcular Precio</h3>  
+    </main>
+
+    <div class="contenedor">
+        <input id="texto" class="sinbordefondo outlinenone" placeholder="Aquí va el texto :)" type="text"/>
+        <button type="button" class="outlinenonebtn"  onclick="sacar_precios()">Calcular</button>
+    </div>
+    <div>
+        <label>El total es </label>
+        <input class="outlinenone" id="total" ></input>
+    </div>
+    <table id="mytable" class="rounded-table" style="display:none">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo">
+          
+        </tbody>
+      </table>
+	<script src="jss.js"></script>
+  </body>
+</html>
