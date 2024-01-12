@@ -1,5 +1,6 @@
 let articulos = [];
 let total = 0;
+let veces = 0;
 function sacar_precios() {
     total = 0;
     articulos = [];
@@ -25,7 +26,10 @@ function sacar_precios() {
 }
 
 function mostrar(){
-    let tableBody = document.getElementById("cuerpo");
+    document.getElementById(veces).style.display = 'none';
+    let tableBody = document.createElement('TBODY');
+    tableBody.id = veces+1;
+    document.getElementById("mytable").appendChild(tableBody);
     articulos.map(articulo=>{
         var tr = document.createElement('TR');
         var td = document.createElement('TD')
@@ -37,6 +41,7 @@ function mostrar(){
         tableBody.appendChild(tr);
     })
     document.getElementById("total").value = total;
+    veces+=1;
 }
 
 let texto=`• SHEIN BAE Vestido ajustado tubo con estampado fruncido lateral verde talla S $54.400
