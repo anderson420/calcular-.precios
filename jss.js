@@ -22,6 +22,7 @@ function sacar_precios() {
     
     console.log(articulos,total);
     document.getElementById("mytable").style.display = 'block';
+    document.getElementById("texto").value= "Fueron "+articulos.length+" Artículos";
     mostrar();
 }
 
@@ -40,6 +41,15 @@ function mostrar(){
         tr.appendChild(td)
         tableBody.appendChild(tr);
     })
+    var tr = document.createElement('TR');
+    var td = document.createElement('TD')
+    td.appendChild(document.createTextNode("Numero de articulos"));
+    tr.appendChild(td)
+    var td = document.createElement('TD')
+    td.appendChild(document.createTextNode(articulos.length));
+    tr.appendChild(td)
+    tableBody.appendChild(tr);
+
     document.getElementById("total").value = total;
     veces+=1;
 }
