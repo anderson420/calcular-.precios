@@ -6,6 +6,7 @@ function sacar_precios() {
     const regex = /•\s([^$]+)\s\$([\d,]+(?:\.\d{1,3})?)/g;
     let match;
     let texto = document.getElementById("texto").value;
+    document.getElementById("texto").value = "";
     console.log(texto);
     while ((match = regex.exec(texto)) !== null) {
         const nombreArticulo = match[1].trim();
